@@ -1,12 +1,16 @@
 package com.example.democrud.model;
 
+import jakarta.annotation.Nonnull;
 import jakarta.persistence.*;
+import org.antlr.v4.runtime.misc.NotNull;
+import org.springframework.lang.NonNull;
 
 @Entity
 public class Persona {
 
     @Id
-    @GeneratedValue(strategy =  GenerationType.AUTO)
+    @GeneratedValue(strategy =  GenerationType.IDENTITY)
+    @NotNull
     private Long id;
 
     @Column
